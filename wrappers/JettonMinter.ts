@@ -11,7 +11,7 @@ export type JettonMinterConfig = {admin: Address; content: Cell; wallet_code: Ce
 
 export function jettonMinterConfigToCell(config: JettonMinterConfig): Cell {
     return beginCell()
-                      .storeCoins(0)
+                      .storeCoins(21000000)
                       .storeAddress(config.admin)
                       .storeRef(config.content)
                       .storeRef(config.wallet_code)
